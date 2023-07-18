@@ -1,0 +1,52 @@
+.page {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+
+.circle {
+  background-color: rgb(45, 4, 28);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  box-shadow: 40px 20px 40px 40px #aba89ea8;
+  position: relative;
+  left: 50px;
+
+  .me {
+    position: absolute;
+    font-size: 40px;
+    right: -170px;
+    font-weight: bold;
+  }
+}
+
+.btn {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.btn.btn-phone {
+  left: -150px;
+}
+
+.btn.btn-mail {
+  right: -80px;
+  bottom: -90px;
+}
+
+.btn.btn-linkedin {
+  left: -190px;
+  bottom: 90px;
+}
+
+
+.btn.btn-github {
+  left: -80px;
+  bottom: -90px;
+}

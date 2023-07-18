@@ -1,0 +1,12 @@
+<div id="menu" [ngClass]="{'close' : !menuOpen}">
+    <div id="trigger" (click)="menuOnClick()"></div>
+    <div id="options">
+        <div [ngClass]="{'current-page': currentPage == 'home'}" (click)="navigate('home')">Home</div>
+        <div [ngClass]="{'current-page': currentPage == 'about'}" (click)="navigate('about')">About me</div>
+        <div [ngClass]="{'current-page': currentPage == 'works'}" (click)="navigate('works')">My works</div>
+        <div [ngClass]="{'current-page': currentPage == 'contact'}" (click)="navigate('contact')">Contact</div>
+    </div>
+</div>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>
