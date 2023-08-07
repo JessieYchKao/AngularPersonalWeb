@@ -1,84 +1,164 @@
 <div class="page">
-<div class="main-area">
-  <div class="area profile-area">
-    <div class="title">
-      <div class="title-text">ABOUT ME X Profile</div>
-      <div class="line"></div>
-      <!-- <div class="title-img">
+  <div class="main-area">
+    <div class="area profile-area">
+      <div class="title">
+        <div class="title-text" #title>ABOUT ME</div>
+        <div class="line"></div>
+        <!-- <div class="title-img">
         <img src="../../assets/photo.jpg" alt="">
       </div> -->
-    </div>
-
-    <div class="content-area">
-      <div class="self-intro" scrollInView (isIntersecting)="isIntersecting('profile')" [isContinuous]="true" #intersection="intersection">
-        <div class="intro-text">
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
       </div>
-        <div class="skills">
-          <div class="skills-title">SKILLS</div>
-            <div class="skill-list">
-              <ul>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS/SCSS</li>
-              </ul>
+
+      <div class="content-area scrollbar" #scrollElement (scroll)="onScroll()">
+        <div class="self-intro" scrollInView (isIntersecting)="isIntersecting('profile')" [isContinuous]="true"
+          #intersection="intersection">
+          <div class="intro-text">
+            Hi, my name is <span class="noto">Jessie</span>. I’m a passionate 
+            <span class="noto">Full Stack Software Developer</span>
+             having experience of building Web and
+              Mobile applications.
+            <br><br>
+            I have had the privilege of working at a
+            <span class="noto">software company</span>, <span class="noto">a start-up</span>, and <span class="noto">a large commercial bank</span>.
+            <br><br>
+            Feel free to take a look at some of <span class="noto link" (click)="navigate('works')">my works.</span>
+            <br><br>
+            I'm currently a graduate student in UC Irvine and my main focus is Embedded & Cyber-Physical Systems.
+            <br><br>
+            When I’m not at the computer, I’m usually learning languages and traveling. I enjoy meeting people from different countries and experience the cultures.
+            I can speak Chinese, English, Korean, and Japanese.
+          </div>
+          <div class="skills">
+            <div class="skills-title">SKILLS</div>
+            <div class="skills-list">
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-code fa-2x"></i></div>
+                <div class="skill-card-title">JavaScript/TypeScript, CSS/SCSS, HTML</div>
+                <div class="skill-desc">
+                  With a combined 7 years of experience from personal projects and works from Galaxy, Ardomus,and CUB.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-angular"></i></div>
+                <div class="skill-card-title">Angular</div>
+                <div class="skill-desc">
+                  With a combined 5 years of experience from personal projects and works from Ardomus,and CUB.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="c-sharp">C&nbsp;</i></div>
+                <div class="skill-card-title">C#, .NET Core</div>
+                <div class="skill-desc">
+                  I have over 3 years of experience programming in C#. Projects include a official document management system using .NET Core, and many other personal projects.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                <div class="skill-card-title">Python</div>
+                <div class="skill-desc">
+                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="c-plusplus">C&nbsp;&nbsp;</i></div>
+                <div class="skill-card-title">C++</div>
+                <div class="skill-desc">
+                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
             </div>
-        </div>
-      </div>
-
-      <div class="self-intro" scrollInView (isIntersecting)="isIntersecting('skills')" [isContinuous]="true">
-        <div class="intro-text">
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-      </div>
-        <div class="skills">
-          <div class="skills-title">SKILLS</div>
-            <div class="skill-list">
-              <ul>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS/SCSS</li>
-              </ul>
+          </div>
+          <div class="skills">
+            <div class="skills-title">EXPERIENCE</div>
+            <div class="skills-list">
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-code fa-2x"></i></div>
+                <div class="skill-card-title">JavaScript/TypeScript, CSS/SCSS, HTML</div>
+                <div class="skill-desc">
+                  With a combined 7 years of experience from personal projects and works from Galaxy, Ardomus,and CUB.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-angular"></i></div>
+                <div class="skill-card-title">Angular</div>
+                <div class="skill-desc">
+                  With a combined 5 years of experience from personal projects and works from Ardomus,and CUB.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="c-sharp">C&nbsp;</i></div>
+                <div class="skill-card-title">C#, .NET Core</div>
+                <div class="skill-desc">
+                  I have over 3 years of experience programming in C#. Projects include a official document management system using .NET Core, and many other personal projects.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                <div class="skill-card-title">Python</div>
+                <div class="skill-desc">
+                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="c-plusplus">C&nbsp;&nbsp;</i></div>
+                <div class="skill-card-title">C++</div>
+                <div class="skill-desc">
+                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-desc">
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                </div>
+              </div>
             </div>
-        </div>
-      </div>
-
-      <div class="self-intro" scrollInView (isIntersecting)="isIntersecting('aa')" [isContinuous]="true">
-        <div class="intro-text">
-          Welcome to my digital world!
-          Since I learned Webdesign in 2014 I discovered a whole new world and found many awesome people around. Some of them became my friends, some of them are my customers.
-      </div>
-        <div class="skills">
-          <div class="skills-title">SKILLS</div>
-            <div class="skill-list">
-              <ul>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS/SCSS</li>
-              </ul>
-            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

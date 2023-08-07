@@ -42,3 +42,27 @@ body {
   font-family: Titillium, sans-serif;
   background-color: rgb(223, 219, 207);
 }
+
+.noto {
+  font-family: Noto-serif-kannada, sans-serif;
+}
+
+
+.scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 3px rgb(147 125 110 / 78%);
+    border-radius: 10px;
+	background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 9px 0px rgb(71 34 34 / 25%);
+	background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#e5c35e52), to(#f7545461), color-stop(.6,#e57d4059));
+}
