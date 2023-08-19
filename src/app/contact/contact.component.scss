@@ -15,11 +15,74 @@
   position: relative;
   left: 50px;
 
+  .info {
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+    &.phone-num::before {
+      animation: typewriter 1.5s steps(15) both, blink 0.3s steps(15) both;
+    }
+    &.mail-addr {
+      left: 55px;
+      font-size: 27px;
+      &::before {
+        animation: typewriter 1.5s steps(24) both, blink 0.3s steps(24) both;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left:0;
+      background: rgb(45, 4, 28);
+      border-left: solid 2px #f9aad3;
+    }
+  }
+
+  @keyframes typewriter{
+    100%{
+      left: 100%;
+    }
+  }
+
+  @keyframes blink{
+    from{border-left: solid 2px  #f9aad3;}
+    to{border-left: solid 2px  #f9aad3;}
+  }
+
+  .image {
+    background-image: url('../../assets/photo.jpg');
+    width: 300px;
+    height: 260px;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 8px #2d081c inset;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-shrink {
+    width: 200px;
+    height: 180px;
+    top: 40px;
+    left: 100px;
+  }
+
   .me {
     position: absolute;
     font-size: 40px;
     right: -170px;
     font-weight: bold;
+  }
+  svg {
+    position: absolute;
   }
 }
 
@@ -29,6 +92,10 @@
   height: 100px;
   border-radius: 10px;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .btn.btn-phone {

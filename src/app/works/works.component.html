@@ -1,0 +1,45 @@
+<div class="page">
+  <div class="main-area">
+    <div class="area profile-area">
+      <div class="title">
+        <div class="title-text" #title><span [ngClass]="{'my-work': more}" (click)="goBack()">MY WORKS</span><span #subtitle></span></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="content-area scrollbar" #scrollElement>
+        <div *ngIf="!more" class="works-list" scrollInView [isContinuous]="true">
+          <ng-container *ngFor="let item of works">
+            <a class="work" #el [style.backgroundImage]="'url(' + item.bg + ')'" (click)="workOnClick(el, item.more || [])">
+              <div class="work-cover">
+                <div class="work-title">{{item.title}}</div>
+              </div>
+            </a>
+          </ng-container>
+        </div>
+
+        <div class="work-detail" *ngIf="more">
+          <div class="pic">
+            <div class="corner corner-one"></div>
+            <div class="corner corner-two"></div>
+            <div class="corner corner-three"></div>
+            <div class="corner corner-four"></div>
+            <i *ngIf="more.images.length > 0 && imageIdx > 1" class="fa-solid fa-angles-left fa-2x prev" (click)="prev()"></i>
+            <div class="images">
+              <div class="image-container" #slider>
+                <img *ngFor="let image of more.images" [src]="image">
+              </div>
+            </div>
+            <i *ngIf="more.images.length > 0 && imageIdx < more.images.length" class="fa-solid fa-angles-right fa-2x next" (click)="next()"></i>
+            <div class="tags">
+              <div *ngFor="let tag of more.tags" class="tag">{{tag}}</div>
+            </div>
+          </div>
+          <div class="desc">
+            <div class="tit">{{more.title}}</div>
+            <div class="cont">{{more.content}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

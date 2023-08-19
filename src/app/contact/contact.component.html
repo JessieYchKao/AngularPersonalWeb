@@ -1,10 +1,21 @@
 <div class="page">
   <div class="circle" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
+    <div class="image" [ngClass]="{'image-shrink': btnType != ''}"></div>
     <div class="me">Hello, Jessie</div>
-    <div class="btn btn-phone"></div>
-    <div class="btn btn-mail"></div>
-    <div class="btn btn-linkedin"></div>
-    <div class="btn btn-github"></div>
+    <div class="btn btn-phone" (click)="btnType = 'phone'">
+      <i class="fa-solid fa-phone fa-2xl" hover-class="fa-shake"></i>
+    </div>
+    <div *ngIf="btnType == 'phone'" class="info phone-num">+886-953-085315</div>
+    <div class="btn btn-mail" (click)="btnType = 'mail'">
+      <i class="fa-solid fa-envelope fa-2xl" hover-class="fa-bounce"></i>
+    </div>
+    <div *ngIf="btnType == 'mail'" class="info mail-addr">jessie.ych.kao@gmail.com</div>
+    <div class="btn btn-linkedin" (click)="openLink('https://www.linkedin.com/in/jessie-kao-339b5a161')">
+      <i class="fa-brands fa-linkedin fa-2xl" hover-class="fa-flip"></i>
+    </div>
+    <div class="btn btn-github" (click)="openLink('https://github.com/JessieYchKao')">
+      <i class="fa-brands fa-square-github fa-2xl" hover-class="fa-beat"></i>
+    </div>
   </div>
 
 </div>

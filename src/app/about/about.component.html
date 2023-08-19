@@ -4,28 +4,26 @@
       <div class="title">
         <div class="title-text" #title>ABOUT ME</div>
         <div class="line"></div>
-        <!-- <div class="title-img">
-        <img src="../../assets/photo.jpg" alt="">
-      </div> -->
       </div>
 
       <div class="content-area scrollbar" #scrollElement (scroll)="onScroll()">
-        <div class="self-intro" scrollInView (isIntersecting)="isIntersecting('profile')" [isContinuous]="true"
-          #intersection="intersection">
+        <div class="self-intro" scrollInView [isContinuous]="true">
           <div class="intro-text">
-            Hi, my name is <span class="noto">Jessie</span>. I’m a passionate 
+            Hi, my name is <span class="noto">Jessie</span>. I’m a passionate
             <span class="noto">Full Stack Software Developer</span>
-             having experience of building Web and
-              Mobile applications.
+            having experience of building Web and
+            Mobile applications.
             <br><br>
             I have had the privilege of working at a
-            <span class="noto">software company</span>, <span class="noto">a start-up</span>, and <span class="noto">a large commercial bank</span>.
+            <span class="noto">software company</span>, <span class="noto">a start-up</span>, and <span class="noto">a
+              large commercial bank</span>.
             <br><br>
             Feel free to take a look at some of <span class="noto link" (click)="navigate('works')">my works.</span>
             <br><br>
             I'm currently a graduate student in UC Irvine and my main focus is Embedded & Cyber-Physical Systems.
             <br><br>
-            When I’m not at the computer, I’m usually learning languages and traveling. I enjoy meeting people from different countries and experience the cultures.
+            When I’m not at the computer, I’m usually learning languages and traveling. I enjoy meeting people from
+            different countries and experience the cultures.
             I can speak Chinese, English, Korean, and Japanese.
           </div>
           <div class="skills">
@@ -49,110 +47,99 @@
                 <div class="skill-icon"><i class="c-sharp">C&nbsp;</i></div>
                 <div class="skill-card-title">C#, .NET Core</div>
                 <div class="skill-desc">
-                  I have over 3 years of experience programming in C#. Projects include a official document management system using .NET Core, and many other personal projects.
+                  I have over 3 years of experience programming in C#. Projects include a official document management
+                  system using .NET Core, and many other personal projects.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
                 <div class="skill-card-title">Python</div>
                 <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                  I've had extensive experience with Python in the course of my research, classwork, and personal
+                  projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="c-plusplus">C&nbsp;&nbsp;</i></div>
                 <div class="skill-card-title">C++</div>
                 <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                  I've had extensive experience with Python in the course of my research, classwork, and personal
+                  projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="fas fa-database"></i></div>
                 <div class="skill-card-title">T-SQL, MSSQL</div>
                 <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                  During the past three year, I've had extensive experience with MSSQL. The projects include building an
+                  Official Document System, maintaining HR Databases, and Lucky Draw Systems.
                 </div>
               </div>
             </div>
           </div>
           <div class="skills">
             <div class="skills-title">EXPERIENCE</div>
-            <div class="skills-list">
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-code fa-2x"></i></div>
-                <div class="skill-card-title">JavaScript/TypeScript, CSS/SCSS, HTML</div>
-                <div class="skill-desc">
-                  With a combined 7 years of experience from personal projects and works from Galaxy, Ardomus,and CUB.
+            <div class="map">
+              <div class="timeline"></div>
+              <div class="loc">
+                <div class="ex-block">
+                  <div class="year">2023</div>
+                </div>
+                <div class="mark">
+                  <div class="icon">
+                    <img src="../../assets/Anteater.png" alt="UCI" class="uci">
+                  </div>
+                  <div class="desc">
+                    <div class="head">Master of Embedded & Cyber-Physical Systems</div>
+                    <div class="sub-head">University of California, Urvine (UCI)</div>
+                    <div class="content">I'm thrilled to embark on my new journey this September, pursuing my Master's degree at UCI. I'm eager to learn alongside experts and peers, immersing myself in coursework and hands-on experiences. My goal is to refine my advanced technical skills, prepare for a future career, and contribute to technological advancements.</div>
+                  </div>
                 </div>
               </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fa-brands fa-angular"></i></div>
-                <div class="skill-card-title">Angular</div>
-                <div class="skill-desc">
-                  With a combined 5 years of experience from personal projects and works from Ardomus,and CUB.
+              <div class="loc">
+                <div class="ex-block">
+                  <div class="year">2020</div>
+                </div>
+                <div class="mark" style="height: 400px;">
+                  <div class="icon">
+                    <img src="../../assets/cub.png" alt="CUB" class="cub">
+                  </div>
+                  <div class="desc">
+                    <div class="head">Full Stack Developer</div>
+                    <div class="sub-head">Cathay United Bank (CUB)</div>
+                    <div class="content">During my time at CUB, I actively engaged in cross-disciplinary collaborations, serving as the engineering representative within interdisciplinary teams. A notable accomplishment was my leadership role, where I guided a team of 5 engineers in successfully implementing a robust Document Management System. This project involved utilizing technologies such as Angular, .NET Core, and SQL, resulting in a streamlined workflow for employees.
+                      My contribution extended further as I undertook the responsibility of managing system maintenance, fine-tuning, and optimization, which included participation in a 24/7 on-call rotation. My dedication to excellence was acknowledged through my outstanding performance, culminating in receiving a top 5% rating during the annual performance appraisals.</div>
+                  </div>
                 </div>
               </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="c-sharp">C&nbsp;</i></div>
-                <div class="skill-card-title">C#, .NET Core</div>
-                <div class="skill-desc">
-                  I have over 3 years of experience programming in C#. Projects include a official document management system using .NET Core, and many other personal projects.
+              <div class="loc">
+                <div class="ex-block">
+                  <div class="year">2018</div>
+                </div>
+                <div class="mark">
+                  <div class="icon">
+                    <img src="../../assets/ardomus.png" alt="ARDOMUS" class="ardomus">
+                  </div>
+                  <div class="desc">
+                    <div class="head">Research & Development Engineer</div>
+                    <div class="sub-head">Ardomus Networks Coporation</div>
+                    <div class="content">aaa</div>
+                  </div>
                 </div>
               </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
-                <div class="skill-card-title">Python</div>
-                <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+              <div class="loc">
+                <div class="ex-block">
+                  <div class="year">2014</div>
                 </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="c-plusplus">C&nbsp;&nbsp;</i></div>
-                <div class="skill-card-title">C++</div>
-                <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
-                </div>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
-                <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                <div class="mark">
+                  <div class="icon">
+                    <img src="../../assets/nthu.png" alt="NTHU" class="nthu">
+                  </div>
+                  <div class="desc">
+                    <div class="head" style="font-size: 17px;">Bachelar of Double Specialty Program of Management & Technology</div>
+                    <div class="sub-head">Ardomus Networks Coporation</div>
+                    <div class="content">aaa</div>
+                  </div>
                 </div>
               </div>
             </div>

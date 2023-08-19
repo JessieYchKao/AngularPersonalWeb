@@ -1,3 +1,5 @@
+@import '../../variables';
+
 #menu {
   position: fixed;
   right: 0;
@@ -62,7 +64,7 @@
 }
 
 #menu > #options > div.current-page {
-  color: #e91c74;
+  color: $dark-pink;
 }
 
 #menu.close > #options {

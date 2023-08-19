@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ScrollInViewDirective } from './directives/scroll-in-view.directive';
+import { HoverClassDirective } from './directives/hover-class.directive';
+import { WorksComponent } from './works/works.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ScrollInViewDirective } from './directives/scroll-in-view.directive';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ScrollInViewDirective
+    ScrollInViewDirective,
+    HoverClassDirective,
+    WorksComponent
   ],
   imports: [
     BrowserModule,
