@@ -12,6 +12,7 @@ export class WorksComponent {
   @ViewChild('title', { static: true }) title!: ElementRef;
   @ViewChild('subtitle', { static: true }) subtitle!: ElementRef;
   @ViewChild('slider', { static: false }) slider!: ElementRef;
+  @ViewChild('images', { static: false }) images!: ElementRef;
 
   works = [
     {
@@ -74,7 +75,7 @@ export class WorksComponent {
   workOnClick(element: any, more: any) {
     this.title.nativeElement.style.fontSize = '40px';
     // this.title.nativeElement.style.transition = 'all 0.5s ease-in-out';
-    this.subtitle.nativeElement.innerText = ' X ' + element.innerText;
+    this.subtitle.nativeElement.innerText = element.innerText;
     // this.subtitle.nativeElement.style.transition = 'all 0.5s ease-in-out';
     this.more = more;
   }
@@ -89,10 +90,10 @@ export class WorksComponent {
 
   next() {
     this.imageIdx = (this.imageIdx >= this.more.images.length) ? 1 : this.imageIdx + 1;
-    this.slider.nativeElement.style.transform = `translateX(-${(this.imageIdx-1)*600}px)`;
+    this.slider.nativeElement.style.transform = `translateX(-${(this.imageIdx-1)*(this.images.nativeElement.offsetWidth-5)}px)`;
   }
   prev() {
     this.imageIdx = (this.imageIdx <= 1) ? this.more.images.length : this.imageIdx - 1;
-    this.slider.nativeElement.style.transform = `translateX(-${(this.imageIdx-1)*600}px)`;
+    this.slider.nativeElement.style.transform = `translateX(-${(this.imageIdx-1)*(this.images.nativeElement.offsetWidth-5)}px)`;
   }
 }

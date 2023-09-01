@@ -1,3 +1,6 @@
+@import '../../mixin';
+@import '../../variables';
+
 .page {
   display: flex;
   align-items: center;
@@ -86,6 +89,13 @@
   }
 }
 
+@include breakpoint-min-max($bp-medium, $bp-large) {
+  .me {
+    right: -50px !important;
+    top: -50px;
+  }
+}
+
 .btn {
   position: absolute;
   width: 100px;
@@ -100,6 +110,7 @@
 
 .btn.btn-phone {
   left: -150px;
+  top: -30px;
 }
 
 .btn.btn-mail {
@@ -116,4 +127,19 @@
 .btn.btn-github {
   left: -80px;
   bottom: -90px;
+}
+
+@include breakpoint-min-max($bp-medium, $bp-large) {
+  .btn.btn-phone {
+    left: -80px !important;
+  }
+  .btn.btn-linkedin {
+    left: -110px !important;
+  }
+  .btn.btn-github {
+    bottom: -90px;
+  }
+  .btn.btn-mail {
+    right: -40px;
+  }
 }

@@ -10,6 +10,10 @@ export class AboutComponent {
 
   @ViewChild('scrollElement', { static: true }) scrollElementRef!: ElementRef;
   @ViewChild('title', { static: true }) title!: ElementRef;
+  @ViewChild('subtitle', { static: true }) subtitle!: ElementRef;
+  @ViewChild('skills', {static: false}) skills!: ElementRef<HTMLDivElement>;
+  @ViewChild('education', {static: false}) education!: ElementRef<HTMLDivElement>;
+  @ViewChild('experience', {static: false}) experience!: ElementRef<HTMLDivElement>;
 
   constructor(private router: Router) { }
 
@@ -26,19 +30,29 @@ export class AboutComponent {
   }
 
   scrollFunction() {
+    const titleHeight = 195;
+    const skill = this.skills.nativeElement.getBoundingClientRect();
+    // console.log(`skills top: ${skill.top} bottom: ${skill.bottom}`);
+
+    const edu = this.education.nativeElement.getBoundingClientRect();
+    // console.log(`education top: ${edu.top} bottom: ${edu.bottom}`);
+
+    const exp = this.experience.nativeElement.getBoundingClientRect();
+
     const scrollElement = this.scrollElementRef.nativeElement;
     if (scrollElement.scrollTop > 100) {
       this.title.nativeElement.style.fontSize = '40px';
-      this.title.nativeElement.style.transition = 'font-size 0.5s ease-in-out';
-      if (scrollElement.scrollTop > 300 && scrollElement.scrollTop < 910) {
-        this.title.nativeElement.innerHTML = 'ABOUT ME' + ' X SKILLS';
-      } else if (scrollElement.scrollTop >= 910) {
-        this.title.nativeElement.innerHTML = 'ABOUT ME' + ' X EXPERIENCE';
+      if (skill.top <= titleHeight && skill.bottom > titleHeight) {
+        this.subtitle.nativeElement.innerText = ' X SKILLS';
+      } else if (edu.top <= titleHeight && edu.bottom > titleHeight) {
+        this.subtitle.nativeElement.innerHTML = ' X EDUCATION';
+      } else if (exp.top <= titleHeight && exp.bottom > titleHeight) {
+        this.subtitle.nativeElement.innerHTML = ' X WORK EXPERIENCE';
       }
     } else {
       this.title.nativeElement.style.fontSize = '50px';
       this.title.nativeElement.style.transition = 'font-size 0.5s ease-in-out';
-      this.title.nativeElement.innerHTML = 'ABOUT ME';
+      this.subtitle.nativeElement.innerText = '';
     }
   }
 }
