@@ -17,64 +17,64 @@ export class WorksComponent {
   works = [
     {
       title: 'Eye Tracking Recommendation System',
-      bg: '../../assets/works/acd4.png',
+      bg: 'assets/works/acd4.png',
       more: {
         title: 'A recommendation system that combines eye tracking techniques with SVM to make recommendations.',
         content: '"Eye Tracking Recommendation System" is a research project under the supervision of Professor Shang-Hong Lai in Computer Vision Lab. It is a shopping website that could make recommendations by analyzing customers’ preferences based on their browsing behaviors. We used Tobii for eye tracking, extracted features of the shopping items images through VGG16(eliminated the last three fully connected layers), calculated the cosine similarity matrix, and made a recommendation based on the model that was trained by SVM.',
-        images: ['../../assets/works/acd4_more.png'],
+        images: ['assets/works/acd4_more.png'],
         tags: ['Python', 'LibSVM', 'Flask', 'Keras', 'Tobii', 'VGG16', 'Project IRIS']
       }
     },
     {
       title: 'What To Eat',
-      bg: '../../assets/works/side1.png',
+      bg: 'assets/works/side1.png',
       more: {
         title: 'A restaurant roulette app called "What to Eat", which is my passion project, designed to solve the most common challenge in my family: choosing a restaurant',
         content: 'Are you familiar with those never-ending family debates over what to eat? I certainly was, and that\'s why I embarked on creating this app. Now, when it\'s time to eat, deciding where to dine is no longer a hassle! Behind the scenes, "What to Eat" is powered by Angular, .NET Core, and MySQL, ensuring a seamless and dependable user experience in both Chinese and English.',
-        images: ['../../assets/works/side1-1.png', '../../assets/works/side1-2.png'],
+        images: ['assets/works/side1-1.png', 'assets/works/side1-2.png'],
         demo: 'https://youtube.com/shorts/J06KtAJgDWw?feature=share',
         tags: ['Angular', '.NET Core', 'MySQL']
       }
     },
     {
       title: 'Super Annoying',
-      bg: '../../assets/works/acd3.png',
+      bg: 'assets/works/acd3.png',
       more: {
         title: 'A fun mobile game named "Super Annoying" designed to relieve stress.',
         content: 'In Software Studio, our team developed a fun mobile game using Unity. It\'s a small game designed to relieve stress. While foods keep falling down, the player must let the character eat the meat by clicking the screen so that he can grow fatter and the player gets points. If the character eats the pills or vegetables, he will become thinner and the player will lose points. Once the score is negative, the game is over.',
-        images: ['../../assets/works/acd3_more.png'],
+        images: ['assets/works/acd3_more.png'],
         tags: ['C#', 'Unity']
       }
     },
     {
       title: 'Cpu Simulator',
-      bg: '../../assets/works/acd1.png',
+      bg: 'assets/works/acd1.png',
       more: {
         title: 'Designed three MIPS CPU simulators including single-cycle, pipelined, and multi-core MIPS CPU simulators.',
         content: 'During the course of Computer Architecture, I implemented three CPU similators including single-cycle, pipeline, and multi-core MIPS CPU simulators.',
-        images: ['../../assets/works/acd1_1.png','../../assets/works/acd1_2.png', '../../assets/works/acd1_2.png'],
+        images: ['assets/works/acd1_1.png','assets/works/acd1_2.png', 'assets/works/acd1_2.png'],
         tags: ['C++']
       }
     },
     {
       title: 'Document Management System',
-      bg: '../../assets/works/prj1.png'
+      bg: 'assets/works/prj1.png'
     },
     {
       title: 'Utilities Expense System',
-      bg: '../../assets/works/prj2.png'
+      bg: 'assets/works/prj2.png'
     },
     {
       title: 'Employee Data Management System',
-      bg: '../../assets/works/prj3.png'
+      bg: 'assets/works/prj3.png'
     },
     {
       title: 'Smart Home App',
-      bg: '../../assets/works/prj4.png'
+      bg: 'assets/works/prj4.png'
     },
     {
       title: 'Head End System',
-      bg: '../../assets/works/prj5.png'
+      bg: 'assets/works/prj5.png'
     }
   ];
 
