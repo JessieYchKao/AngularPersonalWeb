@@ -15,6 +15,8 @@ export class AboutComponent {
   @ViewChild('education', {static: false}) education!: ElementRef<HTMLDivElement>;
   @ViewChild('experience', {static: false}) experience!: ElementRef<HTMLDivElement>;
 
+  subShow: boolean = false;
+  titleShrink: boolean = false;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -41,16 +43,20 @@ export class AboutComponent {
 
     const scrollElement = this.scrollElementRef.nativeElement;
     if (scrollElement.scrollTop > 100) {
-      this.title.nativeElement.style.fontSize = '40px';
+      this.titleShrink = true;
       if (skill.top <= titleHeight && skill.bottom > titleHeight) {
-        this.subtitle.nativeElement.innerText = ' X SKILLS';
+        this.subShow = true;
+        this.subtitle.nativeElement.innerText = 'SKILLS';
       } else if (edu.top <= titleHeight && edu.bottom > titleHeight) {
-        this.subtitle.nativeElement.innerHTML = ' X EDUCATION';
+        this.subShow = true;
+        this.subtitle.nativeElement.innerHTML = 'EDUCATION';
       } else if (exp.top <= titleHeight && exp.bottom > titleHeight) {
-        this.subtitle.nativeElement.innerHTML = ' X WORK EXPERIENCE';
+        this.subShow = true;
+        this.subtitle.nativeElement.innerHTML = 'WORK EXP';
       }
     } else {
-      this.title.nativeElement.style.fontSize = '50px';
+      this.titleShrink = false;
+      this.subShow = false;
       this.title.nativeElement.style.transition = 'font-size 0.5s ease-in-out';
       this.subtitle.nativeElement.innerText = '';
     }

@@ -5,11 +5,13 @@
   display: flex;
   align-items: center;
   height: 100%;
-
+  font-size: 18px;
+  justify-content: center;
   .main-area {
     display: flex;
     height: 90%;
     width: 100%;
+    max-width: 1300px;
     .area {
       display: flex;
       flex-direction: column;
@@ -20,9 +22,24 @@
         flex-direction: column;
         font-weight: bold;
         margin-right: 80px;
-        position: fixed;
+        position: sticky;
         .title-text {
           transition: ease-in-out .5s;
+          position: relative;
+          &.title-shrink {
+            font-size: 40px;
+            .title-with-sub {
+              color: rgba(139, 16, 75, 0.2117647059);
+              font-size: 50px;
+              position: absolute;
+              left: 200px;
+              bottom: -5px;
+              z-index: -1;
+              &::before {
+                content: ' X ';
+              }
+            }
+          }
         }
       }
 
@@ -35,12 +52,12 @@
 
     .content-area {
       height: 100%;
-      margin-top: 120px;
+      margin-top: 20px;
       overflow-y: auto;
       .self-intro {
-        max-width: 1200px;
         display: flex;
         flex-direction: column;
+        margin: 10px;
         .intro-text {
           .link {
             cursor: pointer;
@@ -59,7 +76,7 @@
           .link:hover {--_p: 100%}
         }
         .area {
-          margin-top: 20px;
+          margin-top: 40px;
           .area-title {
             font-weight: bold;
             font-size: 30px;
@@ -71,7 +88,8 @@
             .skill-card {
               position: relative;
               margin: 40px 15px 15px;
-              width: 250px;
+              min-width: 200px;
+              max-width: 300px;
               background: rgb(13 68 109);
               padding: 40px 15px 15px;
               display: flex;
@@ -226,11 +244,15 @@
           .edu-block {
             display: flex;
             .edu-photo {
+              flex: 2;
+              display: flex;
+              align-items: flex-start;
               img {
-                width: 400px;
+                width: 100%;
               }
             }
             .edu-list {
+              flex: 3;
               display: flex;
               flex-direction: column;
               position: relative;
@@ -238,10 +260,10 @@
               .edu-timeline {
                 background: black;
                 width: 3px;
-                height: 295px;
+                height: calc(100% - 15px);
                 position: absolute;
                 left: 170px;
-                top: 5px;
+                top: 10px;
               }
               .edu-desc {
                 display: flex;
@@ -269,7 +291,7 @@
                   .edu-detail-school {
                     font-size: 18px;
                     font-weight: 600;
-                    color: #4f4e4e;
+                    color: #757575;
                   }
                   .edu-detail-content {
                     margin-top: 15px;
@@ -282,11 +304,6 @@
                   }
                 }
               }
-            }
-          }
-          @include breakpoint-min-max($bp-medium, $bp-large) {
-            .edu-block {
-              flex-direction: column;
             }
           }
 
@@ -331,7 +348,7 @@
                   .work-detail-company {
                     font-size: 18px;
                     font-weight: 600;
-                    color: #4f4e4e;
+                    color: #757575;
                   }
                   .work-detail-content {
                     margin-top: 15px;
@@ -355,5 +372,262 @@
       }
     }
 
+  }
+}
+
+
+@include breakpoint-min-max($bp-large, $bp-large-large) {
+  .page {
+    font-size: 16px;
+  }
+}
+
+@include breakpoint-min-max($bp-medium, $bp-large) {
+  .page {
+    font-size: 16px;
+    .main-area {
+      .content-area {
+        .self-intro {
+          .area {
+            .edu-block {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-min-max($bp-small, $bp-medium) {
+  .page {
+    font-size: 16px;
+    .main-area {
+      .area {
+        .title {
+          margin-right: 0px;
+          font-size: 40px;
+          .title-text{
+            &.title-shrink {
+              .title-with-sub {
+                font-size: 40px;
+                right: 0px;
+                left: unset;
+                bottom: -30px;
+              }
+            }
+          }
+        }
+      }
+      .content-area {
+        .self-intro {
+          .area {
+            .edu-block {
+              flex-direction: column;
+              .edu-list {
+                .edu-timeline {
+                  top: 30px;
+                  left: 30px;
+                  z-index: -1;
+                }
+                .edu-desc {
+                  display: grid;
+                  grid-template-areas:
+                      "_pin _year"
+                      ". _detail";
+                  grid-template-columns: 40px 1fr;
+                  .edu-year {
+                    background: $bg-color;
+                    z-index: 1;
+                    grid-area: _year;
+                    .expected {
+                      left: unset;
+                      display: inline;
+                    }
+                  }
+                  .edu-pin {
+                    background: $bg-color;
+                    grid-area: _pin;
+                  }
+                  .edu-detail {
+                    grid-area: _detail;
+                  }
+                }
+              }
+            }
+            .work-block {
+              .work-list {
+                .work-timeline {
+                  top: 30px;
+                  left: 30px;
+                  z-index: -1;
+                }
+                .work-desc {
+                  display: grid;
+                  grid-template-areas:
+                      "_pin _year"
+                      ". _detail";
+                  grid-template-columns: 40px 1fr;
+                  .work-year {
+                    background: $bg-color;
+                    z-index: 1;
+                    grid-area: _year;
+                  }
+                  .work-pin {
+                    background: $bg-color;
+                    grid-area: _pin;
+                  }
+                  .work-detail {
+                    grid-area: _detail;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-max($bp-small) {
+  .page {
+    font-size: 14px;
+    .main-area {
+      .area {
+        .title {
+          margin-right: 0px;
+          font-size: 40px;
+          .title-text{
+            &.title-shrink {
+              .title-with-sub {
+                font-size: 40px;
+                right: 0px;
+                left: unset;
+                bottom: -30px;
+              }
+            }
+          }
+        }
+      }
+      .content-area {
+        .self-intro {
+          .area {
+            .area-title {
+              font-size: 24px;
+            }
+            .skills-list {
+              .skill-card {
+                min-width: 180px;
+                .skill-card-title {
+                  font-size: 18px;
+                }
+              }
+            }
+            .edu-block {
+              flex-direction: column;
+              .edu-list {
+                padding: 5px;
+                .edu-timeline {
+                  top: 30px;
+                  left: 14px;
+                  z-index: -1;
+                }
+                .edu-desc {
+                  display: grid;
+                  grid-template-areas:
+                      "_pin _year"
+                      ". _detail";
+                  grid-template-columns: 25px 1fr;
+                  .edu-year {
+                    background: $bg-color;
+                    z-index: 1;
+                    grid-area: _year;
+                    font-size: 12px;
+                    .expected {
+                      left: unset;
+                      display: inline;
+                    }
+                  }
+                  .edu-pin {
+                    background: $bg-color;
+                    grid-area: _pin;
+                  }
+                  .edu-detail {
+                    grid-area: _detail;
+                    .edu-detail-program {
+                      font-size: 15px;
+                    }
+                    .edu-detail-school {
+                      font-size: 13px;
+                    }
+                    .edu-detail-content {
+                      font-size: 12px;
+                      margin-top: 5px;
+                      padding-left: 5px;
+                      div {
+                        margin-left: 5px;
+                        text-indent: -9px;
+                        &::before {
+                          margin-right: 2px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .work-block {
+              .work-list {
+                padding: 5px;
+                .work-timeline {
+                  top: 30px;
+                  left: 14px;
+                  z-index: -1;
+                }
+                .work-desc {
+                  display: grid;
+                  grid-template-areas:
+                      "_pin _year"
+                      ". _detail";
+                  grid-template-columns: 25px 1fr;
+                  .work-year {
+                    background: $bg-color;
+                    z-index: 1;
+                    grid-area: _year;
+                    font-size: 12px;
+                  }
+                  .work-pin {
+                    background: $bg-color;
+                    grid-area: _pin;
+                  }
+                  .work-detail {
+                    grid-area: _detail;
+                    .work-detail-title {
+                      font-size: 15px;
+                    }
+                    .work-detail-company {
+                      font-size: 13px;
+                    }
+                    .work-detail-content {
+                      font-size: 12px;
+                      margin-top: 5px;
+                      padding-left: 5px;
+                      div {
+                        margin-left: 5px;
+                        text-indent: -9px;
+                        &::before {
+                          margin-right: 2px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

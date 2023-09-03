@@ -37,6 +37,7 @@
           <div class="desc">
             <div class="tit">{{more.title}}</div>
             <div class="cont">{{more.content}}</div>
+            <div class="demo" *ngIf="more.demo"><span class="link" (click)="showDemo(more.demo)">See Demo Video</span></div>
           </div>
         </div>
       </div>

@@ -2,29 +2,28 @@
   <div class="main-area">
     <div class="area profile-area">
       <div class="title">
-        <div class="title-text" #title>ABOUT ME<span #subtitle></span></div>
+        <div class="title-text" #title [ngClass]="{'title-shrink': titleShrink}">ABOUT ME<span #subtitle [ngClass]="{'title-with-sub': subShow}"></span></div>
         <div class="line"></div>
       </div>
 
       <div class="content-area scrollbar" #scrollElement (scroll)="onScroll()">
         <div class="self-intro" scrollInView [isContinuous]="true">
           <div class="intro-text">
-            Hi, my name is <span class="noto">Jessie</span>. I’m a passionate
-            <span class="noto">Full Stack Software Developer</span>
-            having experience of building Web and
-            Mobile applications.
+            Hi, I'm <span class="noto">Jessie</span>, a passionate
+            <span class="noto">Software Developer</span>
+            with over four years of experience in creating Web and Mobile applications.
             <br><br>
-            I have had the privilege of working at a
-            <span class="noto">software company</span>, <span class="noto">a start-up</span>, and <span class="noto">a
+            I've had the privilege of collaborating with diverse organizations, spanning from
+            <span class="noto">a software company</span> to <span class="noto">a start-up</span>, and even <span class="noto">a
               large commercial bank</span>.
             <br><br>
-            Feel free to take a look at some of <span class="noto link" (click)="navigate('works')">my works.</span>
+            Please feel free to explore some of <span class="noto link" (click)="navigate('works')">my projects</span>.
             <br><br>
-            I'm currently a graduate student in UC Irvine and my main focus is Embedded & Cyber-Physical Systems.
+            Currently, I'm a graduate student at UC Irvine, specializing in Embedded & Cyber-Physical Systems.
             <br><br>
-            When I’m not at the computer, I’m usually learning languages and traveling. I enjoy meeting people from
-            different countries and experience the cultures.
-            I can speak Chinese, English, Korean, and Japanese.
+            Outside of my coding endeavors, I'm often engrossed in language learning and traveling. 
+            Meeting people from various countries and immersing myself in different cultures brings me immense joy. 
+            I'm proficient in Chinese, English, and I can engage in conversational communication in Korean and Japanese.
           </div>
           <div #skills class="area">
             <div class="area-title">SKILLS</div>
@@ -33,46 +32,42 @@
                 <div class="skill-icon"><i class="fas fa-code fa-2x"></i></div>
                 <div class="skill-card-title">JavaScript/TypeScript, CSS/SCSS, HTML</div>
                 <div class="skill-desc">
-                  With a combined 7 years of experience from personal projects and works from Galaxy, Ardomus,and CUB.
+                  Accumulating 7 years of practical experience in these fields, proficiency in front-end web development has been forged through diverse projects and professional roles. Demonstrated ability to create responsive, efficient web applications with a focus on clean, maintainable code.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="fa-brands fa-angular"></i></div>
                 <div class="skill-card-title">Angular</div>
                 <div class="skill-desc">
-                  With a combined 5 years of experience from personal projects and works from Ardomus,and CUB.
+                  With a combined 5 years of experience from personal projects, professional work, and contributions to company initiatives. Proficient in developing new systems for organizations and providing guidance and training to junior team members.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="c-sharp">C&nbsp;</i></div>
                 <div class="skill-card-title">C#, .NET Core</div>
                 <div class="skill-desc">
-                  I have over 3 years of experience programming in C#. Projects include a official document management
-                  system using .NET Core, and many other personal projects.
+                  With four years of experience, which has included the development and maintenance of extensive websites for a financial group, along with a track record of enhancing system efficiency by 10% through fine-tuning and optimization.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
                 <div class="skill-card-title">Python</div>
                 <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal
-                  projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                  Extensive experience gained through research, coursework, and personal projects. Notable Python research includes the development of an eye-tracking recommendation system using Flask and LibSVM.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="c-plusplus">C&nbsp;&nbsp;</i></div>
-                <div class="skill-card-title">C++</div>
+                <div class="skill-card-title">C/C++</div>
                 <div class="skill-desc">
-                  I've had extensive experience with Python in the course of my research, classwork, and personal
-                  projects. Some of my research in Python include a recommendation system by using Flask and LibSVM.
+                  Proficiency demonstrated through school projects, including the creation of a Bike Rental System and a MIPS CPU and Virtual Memory Simulator.
                 </div>
               </div>
               <div class="skill-card">
                 <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <div class="skill-card-title">T-SQL, MSSQL</div>
+                <div class="skill-card-title">SQL</div>
                 <div class="skill-desc">
-                  During the past three year, I've had extensive experience with MSSQL. The projects include building an
-                  Official Document System, maintaining HR Databases, and Lucky Draw Systems.
+                  Proficient in MSSQL and MySQL databases, applied in personal side projects and contributions to company system development, with a notable application of PostgreSQL in building a map server solution.
                 </div>
               </div>
             </div>
@@ -82,7 +77,7 @@
             <div class="area-title">EDUCATION</div>
             <div class="edu-block">
               <div class="edu-photo">
-                <img src="../../assets/photo.jpg" alt="Me">
+                <img src="../../assets/grad.jpg" alt="Me">
               </div>
               <div class="edu-list">
                 <div class="edu-timeline"></div>
@@ -105,8 +100,8 @@
                     <div class="edu-detail-program">Bachelor of Double Specialty Program of Management and Technology</div>
                     <div class="edu-detail-school">National Tsing Hua University</div>
                     <div class="edu-detail-content">
-                      <div>First specialty: Quantitative Finance</div>
-                      <div>Second specialty: Computer Science</div>
+                      <div>1st specialty: Quantitative Finance</div>
+                      <div>2nd specialty: Computer Science</div>
                     </div>
                   </div>
                 </div>

@@ -152,7 +152,6 @@
           .pic {
             height: 100%;
             position: relative;
-            background: #ffffff42;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -172,6 +171,14 @@
                 img {
                   width: 100%;
                   margin: 0 5px;
+                }
+                .video-bg {
+                  width: 100%;
+                  margin: 0 5px;
+                  background-color: #F5F5F5;
+                  video {
+                    width: 100%;
+                  }
                 }
               }
               & > .corner {
@@ -259,6 +266,25 @@
               margin-top: 20px;
               color: white;
               font-size: 18px;
+            }
+            .demo {
+              margin-top: 10px;
+              .link {
+                cursor: pointer;
+                --s: 0.1em;   /* the thickness of the line */
+                --c: #000000;
+                color: rgba(11, 10, 1, 0);
+                font-weight: 800;
+                font-size: 20px;
+                padding-bottom: var(--s);
+                background:
+                  linear-gradient(90deg,var(--c) 50%,rgb(227, 222, 160) 0) calc(100% - var(--_p,0%))/200% 100%,
+                  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+                -webkit-background-clip: text,padding-box;
+                        background-clip: text,padding-box;
+                transition: 0.5s;
+              }
+              .link:hover {--_p: 100%}
             }
           }
         }

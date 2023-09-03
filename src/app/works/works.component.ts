@@ -26,6 +26,17 @@ export class WorksComponent {
       }
     },
     {
+      title: 'What To Eat',
+      bg: '../../assets/works/side1.png',
+      more: {
+        title: 'A restaurant roulette app called "What to Eat", which is my passion project, designed to solve the most common challenge in my family: choosing a restaurant',
+        content: 'Are you familiar with those never-ending family debates over what to eat? I certainly was, and that\'s why I embarked on creating this app. Now, when it\'s time to eat, deciding where to dine is no longer a hassle! Behind the scenes, "What to Eat" is powered by Angular, .NET Core, and MySQL, ensuring a seamless and dependable user experience in both Chinese and English.',
+        images: ['../../assets/works/side1-1.png', '../../assets/works/side1-2.png'],
+        demo: 'https://youtube.com/shorts/J06KtAJgDWw?feature=share',
+        tags: ['Angular', '.NET Core', 'MySQL']
+      }
+    },
+    {
       title: 'Super Annoying',
       bg: '../../assets/works/acd3.png',
       more: {
@@ -70,7 +81,7 @@ export class WorksComponent {
   more: any;
   imageIdx: number = 1;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   workOnClick(element: any, more: any) {
     this.title.nativeElement.style.fontSize = '40px';
@@ -95,5 +106,9 @@ export class WorksComponent {
   prev() {
     this.imageIdx = (this.imageIdx <= 1) ? this.more.images.length : this.imageIdx - 1;
     this.slider.nativeElement.style.transform = `translateX(-${(this.imageIdx-1)*(this.images.nativeElement.offsetWidth-5)}px)`;
+  }
+
+  showDemo(url: string) {
+    window.open(url, '_blank');
   }
 }
