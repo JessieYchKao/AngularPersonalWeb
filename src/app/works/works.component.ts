@@ -20,8 +20,8 @@ export class WorksComponent {
       bg: 'assets/works/acd4.png',
       more: {
         title: 'A recommendation system that combines eye tracking techniques with SVM to make recommendations.',
-        content: '"Eye Tracking Recommendation System" is a research project under the supervision of Professor Shang-Hong Lai in Computer Vision Lab. It is a shopping website that could make recommendations by analyzing customers’ preferences based on their browsing behaviors. We used Tobii for eye tracking, extracted features of the shopping items images through VGG16(eliminated the last three fully connected layers), calculated the cosine similarity matrix, and made a recommendation based on the model that was trained by SVM.',
-        images: ['assets/works/acd4_more.png'],
+        content: 'The "Eye Tracking Recommendation System" is a research project supervised by Professor Shang-Hong Lai in Computer Vision Lab. It functions as a shopping website that generates recommendations by analyzing customers’ preferences based on their browsing behaviors. We utilized Tobii for eye tracking, extracted features from shopping item images using VGG16(excluding  the last three fully connected layers), calculated a cosine similarity matrix, and generated recommendations using an SVM-trained model.',
+        images: ['assets/works/acd4_1.png', 'assets/works/acd4_2.png'],
         tags: ['Python', 'LibSVM', 'Flask', 'Keras', 'Tobii', 'VGG16', 'Project IRIS']
       }
     },
@@ -29,9 +29,9 @@ export class WorksComponent {
       title: 'What To Eat',
       bg: 'assets/works/side1.png',
       more: {
-        title: 'A restaurant roulette app called "What to Eat", which is my passion project, designed to solve the most common challenge in my family: choosing a restaurant',
-        content: 'Are you familiar with those never-ending family debates over what to eat? I certainly was, and that\'s why I embarked on creating this app. Now, when it\'s time to eat, deciding where to dine is no longer a hassle! Behind the scenes, "What to Eat" is powered by Angular, .NET Core, and MySQL, ensuring a seamless and dependable user experience in both Chinese and English.',
-        images: ['assets/works/side1-1.png', 'assets/works/side1-2.png'],
+        title: 'A restaurant roulette app called "What to Eat", which is my passion project, designed to solve the most common challenge in my family: deciding what to eat',
+        content: 'Are you familiar with those never-ending family debates over what to eat? I certainly was, and that\'s why I embarked on creating this app. Now, when it\'s mealtime, deciding where to dine is no longer a hassle! Behind the scenes, "What to Eat" is powered by Angular, .NET Core, and MySQL, ensuring a seamless and reliable user experience in both Chinese and English.',
+        images: ['assets/works/side1_1.png', 'assets/works/side1_2.png', 'assets/works/side1_3.png'],
         demo: 'https://youtube.com/shorts/J06KtAJgDWw?feature=share',
         tags: ['Angular', '.NET Core', 'MySQL']
       }
@@ -41,8 +41,8 @@ export class WorksComponent {
       bg: 'assets/works/acd3.png',
       more: {
         title: 'A fun mobile game named "Super Annoying" designed to relieve stress.',
-        content: 'In Software Studio, our team developed a fun mobile game using Unity. It\'s a small game designed to relieve stress. While foods keep falling down, the player must let the character eat the meat by clicking the screen so that he can grow fatter and the player gets points. If the character eats the pills or vegetables, he will become thinner and the player will lose points. Once the score is negative, the game is over.',
-        images: ['assets/works/acd3_more.png'],
+        content: 'In Software Studio, our team developed a fun mobile game using Unity. It\'s a small game designed for stress relief. In this game, various foods continuously fall down the screen, and the player\'s goal is to make the character eat the meat by tapping the screen. This causes the character to grow larger, earning the player points. However, if the character consumes pills or vegetables, he will become thinner, resulting in a deduction of points. The game continues until the player\'s score becomes negative, at which point the game is over.',
+        images: ['assets/works/acd3.png', 'assets/works/acd3_more.png'],
         tags: ['C#', 'Unity']
       }
     },
@@ -51,30 +51,60 @@ export class WorksComponent {
       bg: 'assets/works/acd1.png',
       more: {
         title: 'Designed three MIPS CPU simulators including single-cycle, pipelined, and multi-core MIPS CPU simulators.',
-        content: 'During the course of Computer Architecture, I implemented three CPU similators including single-cycle, pipeline, and multi-core MIPS CPU simulators.',
-        images: ['assets/works/acd1_1.png','assets/works/acd1_2.png', 'assets/works/acd1_2.png'],
-        tags: ['C++']
+        content: 'Implemented MIPS CPU simulators in C to model single-cycle and pipeline architectures, concurrently developing a virtual memory system incorporating page table translation and demand paging. Sharpened debugging and profiling skills through meticulous analysis of test results, all achieved during the Computer Architecture course, which involved designing and implementing three CPU simulators: single-cycle MIPS, pipelined MIPS, and multi-core MIPS.',
+        images: ['assets/works/acd1.png', 'assets/works/acd1_1.png','assets/works/acd1_2.png', 'assets/works/acd1_3.png'],
+        tags: ['C']
       }
     },
     {
       title: 'Document Management System',
-      bg: 'assets/works/prj1.png'
+      bg: 'assets/works/prj1.png',
+      more: {
+        title: 'A system that manages the approval process of the official documents.',
+        content: 'iFlow, a Document Management System, named as the pioneering project for office automation and intelligent transformation, features a responsive design (RWD). It enables employees to create official documents and manage the approval process. Managers and Executives can electronically sign these documents and download PDF copies directly from the system. This innovative system, iFlow, is currently in use by a financial conglomerate comprising nine companies and has been implemented using Angular, .NET Core, and MSSQL technologies.',
+        images: ['assets/works/prj1.png','assets/works/prj1_more.png'],
+        tags: ['Angular', '.NET Core', 'MSSQL', 'HTML', 'TypeScript', 'SCSS']
+      }
     },
     {
       title: 'Utilities Expense System',
-      bg: 'assets/works/prj2.png'
+      bg: 'assets/works/prj2.png',
+      more: {
+        title: 'A system that oversees the payment of water, electricity, Internet, and phone bills for over 160 bank branches and automatically posts the expenses to the General Ledger.',
+        content: 'On a monthly basis, the water, electricity, Internet, and phone bills for more than 160 bank branches are paid using credit cards. The Utilities Expense System receives and stores the credit card statement data. General Affairs Personnel and Financial Officers then allocate the expenses, and the system automatically updates the General Ledger.',
+        images: ['assets/works/prj2.png','assets/works/prj2_more.png'],
+        tags: ['ASP', 'MSSQL']
+      }
     },
     {
       title: 'Employee Data Management System',
-      bg: 'assets/works/prj3.png'
+      bg: 'assets/works/prj3.png',
+      more: {
+        title: 'A system that manages employee data and seamlessly integrates it with hundreds of other systems within the bank.',
+        content: 'The Employee Data Management System efficiently handles employee personal information, insurance details, salary accounts, and licenses. This system executes SQL Jobs during the night, merging and providing various data to hundreds of bank systems. This ensures that these systems have access to the latest data, enabling them to conduct their operations the following day.',
+        images: ['assets/works/prj3.png','assets/works/prj3_more.png'],
+        tags: ['ASP', 'MSSQL']
+      }
     },
     {
       title: 'Smart Home App',
-      bg: 'assets/works/prj4.png'
+      bg: 'assets/works/prj4.png',
+      more: {
+        title: 'An app designed to control and communicate with IoT devices in a smart home through the use of an IoT gateway.',
+        content: 'The IoT gateways developed by our company offer services that facilitate the integration of various brands and types of devices into a unified network. Through the Smart Home App, users can effortlessly control and communicate with these devices using their smartphones.',
+        images: ['assets/works/prj4_1.png','assets/works/prj4_2.png'],
+        tags: ['Angular', 'Python', 'MySQL', 'HTML', 'TypeScript', 'SCSS']
+      }
     },
     {
       title: 'Head End System',
-      bg: 'assets/works/prj5.png'
+      bg: 'assets/works/prj5.jpg',
+      more: {
+        title: 'A system designed to manage meter data for Taipower, a state-owned power company.',
+        content: 'The Head End System, tailored for Taipower, a state-owned power company, is a comprehensive solution. It empowers the management of smart meters, facilitates data reception from the meters, and provides a visual representation of meter locations on an interactive map. This map is dynamically generated by a map server utilizing vector tiles.',
+        images: ['assets/works/prj5_1.png'],
+        tags: ['Angular', 'Python', 'MySQL', 'HTML', 'TypeScript', 'SCSS']
+      }
     }
   ];
 
@@ -84,17 +114,13 @@ export class WorksComponent {
   constructor(private router: Router) { }
 
   workOnClick(element: any, more: any) {
-    this.title.nativeElement.style.fontSize = '40px';
-    // this.title.nativeElement.style.transition = 'all 0.5s ease-in-out';
     this.subtitle.nativeElement.innerText = element.innerText;
-    // this.subtitle.nativeElement.style.transition = 'all 0.5s ease-in-out';
     this.more = more;
+    this.imageIdx = 1;
   }
 
   goBack() {
     if (!this.more) return;
-    this.title.nativeElement.style.fontSize = '50px';
-    this.title.nativeElement.style.transition = 'all 0.5s ease-in-out';
     this.subtitle.nativeElement.innerText = '';
     this.more = null;
   }

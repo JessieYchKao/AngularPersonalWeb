@@ -19,8 +19,8 @@
 
         <div class="work-detail" *ngIf="more">
           <div class="pic">
-            <i *ngIf="more.images.length > 1 && imageIdx > 1" class="fa-solid fa-angles-left fa-2x prev" (click)="prev()"></i>
             <div class="images" #images>
+              <i *ngIf="more.images.length > 1 && imageIdx > 1" class="fa-solid fa-angles-left fa-2x prev" (click)="prev()"></i>
               <div class="corner corner-one"></div>
               <div class="corner corner-two"></div>
               <div class="corner corner-three"></div>
@@ -28,8 +28,8 @@
               <div class="image-container" #slider>
                 <img *ngFor="let image of more.images" [src]="image">
               </div>
+              <i *ngIf="more.images.length > 1 && imageIdx < more.images.length" class="fa-solid fa-angles-right fa-2x next" (click)="next()"></i>
             </div>
-            <i *ngIf="more.images.length > 1 && imageIdx < more.images.length" class="fa-solid fa-angles-right fa-2x next" (click)="next()"></i>
             <div class="tags">
               <div *ngFor="let tag of more.tags" class="tag">{{tag}}</div>
             </div>
@@ -37,7 +37,7 @@
           <div class="desc">
             <div class="tit">{{more.title}}</div>
             <div class="cont">{{more.content}}</div>
-            <div class="demo" *ngIf="more.demo"><span class="link" (click)="showDemo(more.demo)">See Demo Video</span></div>
+            <div class="demo" *ngIf="more.demo"><span class="link" (click)="showDemo(more.demo)">Watch Demo Video</span></div>
           </div>
         </div>
       </div>

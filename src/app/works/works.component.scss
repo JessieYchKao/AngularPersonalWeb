@@ -21,13 +21,18 @@
         display: flex;
         flex-direction: column;
         font-weight: bold;
-        margin-right: 80px;
         .title-text {
           transition: all 0.5s ease-in-out;
+          position: relative;
           .subtitle {
-            margin-left: 30px;
+            font-size: 30px;
+            color: #3f3f3f91;
+            position: absolute;
+            right: 0;
+            bottom: -20px;
           }
           .my-work {
+            font-size: 40px;
             background-image: linear-gradient(
               -225deg,
               $dark-pink-purple 0%,
@@ -54,14 +59,6 @@
           @keyframes textclip {
             to {
               background-position: 120% center;
-            }
-          }
-        }
-        @include breakpoint-min-max($bp-medium, $bp-large) {
-          .title-text {
-            .subtitle {
-              font-size: 30px;
-
             }
           }
         }
@@ -156,7 +153,6 @@
             align-items: center;
             justify-content: center;
             min-width: 350px;
-            max-width: 600px;
             flex-direction: column;
 
             .images {
@@ -170,15 +166,7 @@
                 transition: all .8s ease-in-out;
                 img {
                   width: 100%;
-                  margin: 0 5px;
-                }
-                .video-bg {
-                  width: 100%;
-                  margin: 0 5px;
-                  background-color: #F5F5F5;
-                  video {
-                    width: 100%;
-                  }
+                  margin-right: 15px;
                 }
               }
               & > .corner {
@@ -218,9 +206,10 @@
             .prev {
               z-index: 1;
               position: absolute;
-              left: 0;
+              left: 10px;
               cursor: pointer;
-              color: #5a5858;
+              color: #7e7e7e91;
+              top: 50%;
               &:hover {
                 color: black;
               }
@@ -228,16 +217,16 @@
             .next {
               z-index: 1;
               position: absolute;
-              right: 0;
+              right: 10px;
               cursor: pointer;
-              color: #5a5858;
+              color: #7e7e7e91;
+              top: 50%;
               &:hover {
                 color: black;
               }
             }
             .tags {
-              // position: absolute;
-              // bottom: -60px;
+              margin-top: 5px;
               display: flex;
               gap: 10px;
               flex-wrap: wrap;
@@ -288,22 +277,236 @@
             }
           }
         }
-        @include breakpoint-min-max($bp-small, $bp-large) {
+      }
+    }
+  }
+}
+
+@include breakpoint-min-max($bp-medium, $bp-large) {
+  .page {
+    .main-area {
+      .area {
+        .title {
+          .title-text {
+            font-size: 40px;
+            .subtitle {
+              font-size: 25px;
+              color: #3f3f3f91;
+              position: absolute;
+              right: 0;
+              bottom: -20px;
+            }
+            .my-work {
+              font-size: 32px;
+            }
+          }
+        }
+        .content-area {
           .work-detail {
             flex-direction: column;
             .pic {
-
               .images {
-                .image-container {
-                }
                 img {
                   width: 100%;
+                }
+              }
+              .tags {
+                font-size: 13px;
+                .tag {
+                  padding: 3px 8px;
                 }
               }
             }
             .desc {
               max-width: calc(100% - 20px);
               top: 20px;
+              .tit {
+                font-size: 20px;
+              }
+              .cont {
+                font-size: 16px;
+              }
+            }
+          }
+          .works-list {
+            .work {
+              width: 320px;
+              height: 200px;
+              margin: 20px 10px;
+              .work-cover {
+                .work-title {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-min-max($bp-small, $bp-medium) {
+  .page {
+    .main-area {
+      .area {
+        .title {
+          .title-text {
+            font-size: 30px;
+            .subtitle {
+              font-size: 15px;
+              color: #3f3f3f91;
+              position: absolute;
+              right: 0;
+              bottom: -20px;
+            }
+            .my-work {
+              font-size: 25px;
+            }
+          }
+        }
+        .content-area {
+          .work-detail {
+            flex-direction: column;
+            padding: 10px;
+            .pic {
+              min-width: 240px;
+              .images {
+                padding: 5px;
+                .image-container {
+                  img {
+                    width: 100%;
+                    margin-right: 5px;
+                  }
+                }
+                .corner {
+                  width: 15px;
+                  height: 15px;
+                  border-width: 3px;
+                }
+              }
+              
+              .tags {
+                font-size: 12px;
+                .tag {
+                  padding: 3px 7px;
+                }
+              }
+            }
+            .desc {
+              max-width: calc(100% - 20px);
+              top: 20px;
+              .tit {
+                font-size: 15px;
+              }
+              .cont {
+                font-size: 13px;
+              }
+              .demo {
+                .link {
+                  font-size: 17px;
+                }
+              }
+            }
+          }
+          .works-list {
+            .work {
+              width: 192px;
+              height: 120px;
+              margin: 20px 10px;
+              .work-cover {
+                .work-title {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-max($bp-small) {
+  .page {
+    min-width: 240px;
+    .main-area {
+      .area {
+        .title {
+          .title-text {
+            font-size: 24px;
+            .subtitle {
+              font-size: 13px;
+              color: #3f3f3f91;
+              position: absolute;
+              right: 0;
+              bottom: -20px;
+            }
+            .my-work {
+              font-size: 18px;
+            }
+          }
+        }
+        .content-area {
+          .work-detail {
+            flex-direction: column;
+            padding: 10px;
+            .pic {
+              min-width: unset;
+              .images {
+                padding: 5px;
+                .image-container {
+                  img {
+                    margin-right: 5px;
+                    width: 100%;
+                  }
+                }
+                .corner {
+                  width: 15px;
+                  height: 15px;
+                  border-width: 3px;
+                }
+              }
+              .prev {
+                left: 5px;
+              }
+              .next {
+                right: 5px;
+              }
+              .tags {
+                font-size: 12px;
+                .tag {
+                  padding: 3px 7px;
+                }
+              }
+            }
+            .desc {
+              max-width: calc(100% - 20px);
+              min-width: unset;
+              top: 20px;
+              .tit {
+                font-size: 13px;
+              }
+              .cont {
+                font-size: 12px;
+              }
+              .demo {
+                .link {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .works-list {
+            .work {
+              width: 192px;
+              height: 120px;
+              margin: 20px 10px;
+              .work-cover {
+                .work-title {
+                  font-size: 10px;
+                }
+              }
             }
           }
         }

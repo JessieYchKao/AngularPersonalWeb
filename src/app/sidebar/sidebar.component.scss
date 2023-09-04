@@ -2,6 +2,7 @@
 @import '../../mixin';
 
 #menu {
+  z-index: 1;
   position: fixed;
   right: 0;
   top: 0;
@@ -90,40 +91,73 @@
 
 @include breakpoint-min-max($bp-medium, $bp-large) {
   #menu {
-    width: 150px;
+    width: 130px;
     #trigger {
-      right: 125px;
+      right: 105px;
+      width: 50px;
+      height: 240px;
+      &::before {
+        font-size: 25px;
+      }
     }
     #options {
-      font-size: 20px;
+      left: 35px;
+      font-size: 17px;
+      height: 260px;
+    }
+    &.close {
+      width: 30px;
     }
   }
 }
 
 @include breakpoint-min-max($bp-small, $bp-medium) {
   #menu {
-    width: 150px;
+    width: 100px;
     #trigger {
-      right: 125px;
+      right: 83px;
+      width: 35px;
+      height: 180px;
+      &::before {
+        font-size: 18px;
+      }
     }
     #options {
-      font-size: 20px;
+      left: 28px;
+      font-size: 14px;
+      height: 200px;
     }
+    &.close {
+      width: 20px;
+    }
+  }
+  .main-content {
+    margin-right: 120px;
   }
 }
 
 @include breakpoint-max($bp-small) {
   #menu {
-    width: 150px;
+    width: 75px;
     #trigger {
-      right: 125px;
+      right: 63px;
+      width: 20px;
+      height: 150px;
+      &::before {
+        font-size: 12px;
+      }
     }
     #options {
-      font-size: 20px;
+      left: 16px;
+      font-size: 12px;
+      height: 180px;
+    }
+    &.close {
+      width: 14px;
     }
   }
   .main-content {
-    margin-right: 180px;
+    margin-right: 80px;
   }
 }
 

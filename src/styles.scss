@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixin';
 
 html {
   min-height: 100%;
@@ -81,4 +82,40 @@ body {
 
 .fa-2xl {
   font-size: 3em;
+}
+
+.sm-text {
+  display: none;
+}
+.lg-text {
+  display: inline;
+}
+
+@include breakpoint-min-max($bp-small, $bp-medium) {
+  .fa-2x {
+    font-size: 1.5em;
+  }
+  .fa-2xl {
+    font-size: 2em;
+  }
+}
+
+@include breakpoint-max($bp-small) {
+  .fa-2x {
+    font-size: 1em;
+  }
+  .fa-2xl {
+    font-size: 1.5em;
+  }
+  .sm-text {
+    display: inline;
+  }
+  .lg-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .short-text { display: none; }
+  .full-text { display: inline; }
 }
