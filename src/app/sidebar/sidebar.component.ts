@@ -16,7 +16,7 @@ export class SidebarComponent {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((x: any) => {
-      this.currentPage = x.url.split('/')[1];
+      this.currentPage = x.url === '/' ? 'home' : x.url.split('/')[1];
     })
   }
 
