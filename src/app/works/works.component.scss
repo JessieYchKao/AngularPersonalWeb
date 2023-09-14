@@ -95,15 +95,27 @@
           flex-wrap: wrap;
           justify-content: space-around;
           .work {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
             cursor: pointer;
             width: 400px;
             height: 250px;
-            background-color: $light-pink;
+            background-color: #afacad40;
+            box-shadow: 0px 0px 4px 0px #0000005e;
             margin: 50px 10px;
-            text-decoration-line: none;
-            background-size: cover;
-            background-position: center;
+            .work-img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              text-decoration-line: none;
+              background-size: cover;
+              background-position: center;
+            }
             .work-cover {
+              width: 100%;
+              z-index: 1;
               background-color: $dark-pink-purple;
               opacity: 0;
               transition: all ease-in-out .5s;
@@ -246,6 +258,7 @@
             background-color: $dark-pink-purple;
             max-width: 350px;
             min-width: 200px;
+            height: fit-content;
             position: relative;
             top: 50px;
             color: $light-pink;
@@ -514,5 +527,313 @@
         }
       }
     }
+  }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+  
+/* Drawing Frame */
+.frame {
+  position: absolute;
+  z-index: 0;
+  .loader {
+   width: 60px;
+   height: 60px;
+   
+   span {
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     
+     &:before,
+     &:after {
+       position: absolute;
+       width: 4px;
+       height: 100%;
+       background: $dark-pink;
+       content: "";
+     }
+     
+     &:before {
+       top: auto;
+       right: 0;
+       bottom: 0;
+       @include animation(drawframeRight 4s linear infinite 0.5s);
+     }
+     
+     &:after {
+       top: 0;
+       bottom: auto;
+       left: 0;
+       @include animation(drawframeLeft 4s linear infinite 1.5s);
+     }
+   }
+   
+   &:before,
+   &:after {
+     position: absolute;
+     width: 100%;
+     height: 4px;
+     background: $dark-pink;
+     content: "";
+   }
+   
+   &:before {
+     top: 0;
+     right: 0;
+     left: auto;
+     @include animation(drawframeTop 4s linear infinite);
+   }
+   
+   &:after {
+     right: auto;
+     bottom: 0;
+     left: 0;
+     @include animation(drawframeBottom 4s linear infinite 1s);
+   }
+ }
+}
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+}
+
+
+/* Animations */
+@-webkit-keyframes drawframeTop {
+  0% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+  12.5% {
+      right: 0;
+      left: auto;
+      width: 0%;
+  }
+  50% {
+      right: auto;
+      left: 0;
+      width: 0%;
+  }
+  62.5% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+  100% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+}
+
+@keyframes drawframeTop {
+  0% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+  12.5% {
+      right: 0;
+      left: auto;
+      width: 0%;
+  }
+  50% {
+      right: auto;
+      left: 0;
+      width: 0%;
+  }
+  62.5% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+  100% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+}
+
+@-webkit-keyframes drawframeBottom {
+  0% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+  12.5% {
+      right: auto;
+      left: 0;
+      width: 0%;
+  }
+  50% {
+      right: 0;
+      left: auto;
+      width: 0%;
+  }
+  62.5% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+  100% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+}
+
+@keyframes drawframeBottom {
+  0% {
+      right: auto;
+      left: 0;
+      width: 100%;
+  }
+  12.5% {
+      right: auto;
+      left: 0;
+      width: 0%;
+  }
+  50% {
+      right: 0;
+      left: auto;
+      width: 0%;
+  }
+  62.5% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+  100% {
+      right: 0;
+      left: auto;
+      width: 100%;
+  }
+}
+
+@-webkit-keyframes drawframeRight {
+  0% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+  }
+  12.5% {
+      top: auto;
+      bottom: 0;
+      height: 0%;
+  }
+  50% {
+      top: 0;
+      bottom: auto;
+      height: 0%;
+  }
+  62.5% {
+      top: 0;
+      bottom: auto;
+      height: 100%;
+  }
+  100% {
+      top: 0;
+      bottom: auto;
+      height: 100%;
+  }
+}
+
+@keyframes drawframeRight {
+  0% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+  }
+  12.5% {
+      top: auto;
+      bottom: 0;
+      height: 0%;
+  }
+  50% {
+      top: 0;
+      bottom: auto;
+      height: 0%;
+  }
+  62.5% {
+      top: 0;
+      bottom: auto;
+      height: 100%;
+  }
+  100% {
+      top: 0;
+      bottom: auto;
+      height: 100%;
+  }
+}
+
+@-webkit-keyframes drawframeLeft {
+  0% {
+      top:  0;
+      bottom: auto;
+      height: 100%;
+  }
+  12.5% {
+      top: 0;
+      bottom: auto;
+      height: 0%;
+  }
+  50% {
+      top: auto;
+      bottom: 0;
+      height: 0%;
+  }
+  62.5% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+  }
+  100% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+  }
+}
+
+@keyframes drawframeLeft {
+  0% {
+      top:  0;
+      bottom: auto;
+      height: 100%;
+  }
+  12.5% {
+      top: 0;
+      bottom: auto;
+      height: 0%;
+  }
+  50% {
+      top: auto;
+      bottom: 0;
+      height: 0%;
+  }
+  62.5% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+  }
+  100% {
+      top: auto;
+      bottom: 0;
+      height: 100%;
   }
 }

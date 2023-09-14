@@ -9,7 +9,13 @@
       <div class="content-area scrollbar" #scrollElement>
         <div *ngIf="!more" class="works-list" scrollInView [isContinuous]="true">
           <ng-container *ngFor="let item of works">
-            <a class="work" #el [style.backgroundImage]="'url(' + item.bg + ')'" (click)="workOnClick(el, item.more || [])">
+            <a class="work" #el (click)="workOnClick(el, item.more || [])">
+              <div class="frame">
+                <div class="loader">
+                  <span></span>
+                </div>
+              </div>
+              <div class="work-img" [style.backgroundImage]="'url(' + item.bg + ')'"></div>
               <div class="work-cover">
                 <div class="work-title">{{item.title}}</div>
               </div>

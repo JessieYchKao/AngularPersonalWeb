@@ -25,7 +25,12 @@ export class SidebarComponent {
   }
 
   navigate(page: string) {
+    if (this.currentPage === page) {
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
+      this.router.navigate([page]));
+    } else {
+      this.router.navigate([page]);
+    }
     this.currentPage = page;
-    this.router.navigate([page]);
   }
 }
