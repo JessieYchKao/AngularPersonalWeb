@@ -320,6 +320,7 @@
         .content-area {
           .work-detail {
             flex-direction: column;
+            justify-content: flex-start;
             .pic {
               .images {
                 img {
@@ -384,6 +385,7 @@
         .content-area {
           .work-detail {
             flex-direction: column;
+            justify-content: flex-start;
             padding: 10px;
             .pic {
               min-width: 240px;
@@ -466,6 +468,7 @@
         .content-area {
           .work-detail {
             flex-direction: column;
+            justify-content: flex-start;
             padding: 10px;
             .pic {
               min-width: unset;
