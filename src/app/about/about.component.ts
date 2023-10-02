@@ -31,6 +31,10 @@ export class AboutComponent {
     this.router.navigate([page]);
   }
 
+  website(url: string) {
+    window.open(url, '_blank');
+  }
+
   scrollFunction() {
     const titleHeight = 195;
     const skill = this.skills.nativeElement.getBoundingClientRect();

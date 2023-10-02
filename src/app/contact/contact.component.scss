@@ -29,7 +29,7 @@
       animation: typewriter 1.5s steps(15) both, blink 0.3s steps(15) both;
     }
     &.mail-addr {
-      left: 55px;
+      left: 95px;
       font-size: 27px;
       &::before {
         animation: typewriter 1.5s steps(24) both, blink 0.3s steps(24) both;
@@ -172,7 +172,7 @@
       bottom: 50px;
       font-size: 20px;
       &.mail-addr {
-        left: 35px;
+        left: 60px;
         font-size: 17px;
       }
     }
@@ -231,7 +231,7 @@
       bottom: 30px;
       font-size: 13px;
       &.mail-addr {
-        left: 22px;
+        left: 36px;
         font-size: 10px;
       }
     }

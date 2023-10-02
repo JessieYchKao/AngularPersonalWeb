@@ -347,6 +347,17 @@
                     font-size: 18px;
                     font-weight: 600;
                     color: #757575;
+                    cursor: pointer;
+                    --c: #935e3b;; /* the color */
+                    color: #0000;
+                    background:
+                      linear-gradient(90deg,var(--c) 50%,#757575 0) calc(100% - var(--_p,0%))/200% 100%;
+                    -webkit-background-clip: text,padding-box;
+                            background-clip: text,padding-box;
+                    transition: 1s;
+                    &:hover {
+                      --_p: 100%;
+                    }
                   }
                   .work-detail-content {
                     margin-top: 15px;
