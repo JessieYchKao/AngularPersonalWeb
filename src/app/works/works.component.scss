@@ -291,6 +291,22 @@
               }
               .link:hover {--_p: 100%}
             }
+            .github {
+              margin-top: 10px;
+              color: black;
+              text-shadow: 0 0 6px white;
+              & i {
+                transition: .5s;
+                font-size: 1.8em;
+                cursor: pointer;
+              }
+              &:hover {
+                i {
+                  font-size: 2em;
+                }
+              }
+            }
+
           }
         }
       }
