@@ -16,12 +16,24 @@ export class WorksComponent {
 
   works = [
     {
+      title: 'Distributed Sensor Network',
+      bg: 'assets/works/acd6.png',
+      more: {
+        title: 'An autonomous IoT network with ESP8266 devices, allowing self-organization, with a Raspberry Pi log server collecting data.',
+        content: 'This project focuses on creating an autonomous IoT network involving ESP8266 devices and a Raspberry Pi (RPi). The system allows ESP8266 devices to communicate via broadcast, sharing analog light sensor readings and designating a "Master" device based on the highest sensor reading. The RPi displays the Master\'s data and controls RGB LEDs corresponding to the ESP8266 devices, indicating sensor readings. Additionally, the system includes a reset functionality triggered by an RPi-connected button.',
+        images: ['assets/works/acd6_1.png','assets/works/acd6_2.png','assets/works/acd6_3.png','assets/works/acd6_4.png','assets/works/acd6_5.png'],
+        demo: 'https://drive.google.com/file/d/1s9wrxynB38liuQjL5doZBcFQzliqNWak/view',
+        github: 'https://github.com/JessieYchKao/Distributed-Sensor-Network',
+        tags: ['Python', 'C++', 'ESP8266', 'Raspberry Pi']
+      }
+    },
+    {
       title: 'IoT Light Sensor Communication',
       bg: 'assets/works/acd5.png',
       more: {
         title: 'A project that demonstrate the communication between a Raspberry Pi and an ESP8266 microcontroller to control LEDs based on light sensor data.',
         content: 'This project establishes communication between a Raspberry Pi and an ESP8266 microcontroller. The ESP8266 collects light sensor data and transmits it to the Raspberry Pi, which then processes the data and controls the illumination of different LEDs (Red, Yellow, Green, and White) based on the received sensor data.',
-        images: ['assets/works/acd5.png'],
+        images: ['assets/works/acd5_1.png','assets/works/acd5_2.png'],
         demo: 'https://drive.google.com/file/d/1WrScIqkv76lKfiEBr7FWv31vHqEYWnRY/view',
         github: 'https://github.com/JessieYchKao/IoT-Light-Sensor-Communication',
         tags: ['Python', 'C++', 'ESP8266', 'Raspberry Pi', 'GJD 1602 IIC']
