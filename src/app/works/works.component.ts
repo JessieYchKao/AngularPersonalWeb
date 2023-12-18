@@ -20,11 +20,23 @@ export class WorksComponent {
       bg: 'assets/works/acd6.png',
       more: {
         title: 'An autonomous IoT network with ESP8266 devices, allowing self-organization, with a Raspberry Pi log server collecting data.',
-        content: 'This project focuses on creating an autonomous IoT network involving ESP8266 devices and a Raspberry Pi (RPi). The system allows ESP8266 devices to communicate via broadcast, sharing analog light sensor readings and designating a "Master" device based on the highest sensor reading. The RPi displays the Master\'s data and controls RGB LEDs corresponding to the ESP8266 devices, indicating sensor readings. Additionally, the system includes a reset functionality triggered by an RPi-connected button.',
+        content: 'This project focuses on creating an autonomous IoT network involving ESP8266 devices and a Raspberry Pi (RPi). The system allows ESP8266 devices to communicate via broadcast, sharing analog light sensor readings and designating a \'Master\' device based on the highest sensor reading. Additionally, an LED ring is connected to each ESP8266 to visually represent the brightness level.The RPi is integrated with an LED Matrix, providing a visual representation of the photocell data trace of the master device over the past ~30 seconds. Furthermore, a 4-digit 7-segment display is employed to show the last 3 digits of the IP address of the current Master.To enhance user interaction, the system includes a Graphical User Interface (GUI) displaying the photocell data trace and a bar chart. Users can choose the specific log file for analysis, making the system more versatile and user-friendly.',
         images: ['assets/works/acd6_1.png','assets/works/acd6_2.png','assets/works/acd6_3.png','assets/works/acd6_4.png','assets/works/acd6_5.png'],
-        demo: 'https://drive.google.com/file/d/1s9wrxynB38liuQjL5doZBcFQzliqNWak/view',
+        demo: 'https://drive.google.com/file/d/10y92JaCqSt_dLpVMYE58s7W4lGU6slHA/view?usp=sharing',
         github: 'https://github.com/JessieYchKao/Distributed-Sensor-Network',
         tags: ['Python', 'C++', 'ESP8266', 'Raspberry Pi']
+      }
+    },
+    {
+      title: 'Wireless Pulse Monitoing System',
+      bg: 'assets/works/acd7.png',
+      more: {
+        title: 'A wireless pulse monitoring system using two Raspberry Pi units and a pulse sensor. The system captures pulse signals, transmits over Bluetooth, and displays the pulse data along with other relevant health metrics.',
+        content: 'This wireless pulse monitoring system comprises two Raspberry Pi units. The first unit is connected to an Analog-to-Digital Converter (ADC) and captures digital pulse signals through a pulse sensor. Subsequently, it transmits the acquired data over Bluetooth. The second unit is responsible for displaying the pulse data graph, calculating Beats Per Minute (BPM), and presenting other relevant health metrics on a Graphical User Interface (GUI) at the receiving end.The system adheres to the Nyquist Theorem for an appropriate sample rate. BPM calculation involves the use of pre-processing and post-processing techniques, complemented by a low-pass filter and a sliding window. To determine suggested BPM values for different age groups, the system relies on an age input and a JSON file.',
+        images: ['assets/works/acd7_1.png','assets/works/acd7_2.png','assets/works/acd7_3.png','assets/works/acd7_4.png','assets/works/acd7_5.png'],
+        demo: 'https://drive.google.com/file/d/1V-LnDiuW1aX7nh6y_cBbI9LMcPuf0I7B/view?usp=sharing',
+        github: 'https://github.com/JessieYchKao/PulseMonitoringSystem',
+        tags: ['Python', 'Raspberry Pi', 'Pulse Sensor', 'ADC', 'PyQt']
       }
     },
     {
