@@ -16,6 +16,17 @@ export class WorksComponent {
 
   works = [
     {
+      title: 'HeroGuard',
+      bg: 'assets/works/acd8.png',
+      more: {
+        title: 'Tracking and Communication System in Hazardous Environments',
+        content: 'HEROGUARD is a location tracking and communication system that is to be used by firefighters and emergency personnel when they are deployed in hazardous environments. It uses various wireless signals to determine the wearers’ position and report the data to a central location where their positions and vitals would be tracked. The system needs to be reliable and able to accurately communicate the location of the firefighter with meter accuracy, allowing for safer protocols to be implemented by the first responders as they enter a hostile environment.',
+        images: ['assets/works/acd8_5.png', 'assets/works/acd8_1.png','assets/works/acd8_2.png','assets/works/acd8_3.png','assets/works/acd8_4.png'],
+        demo: 'https://www.youtube.com/watch?v=mCku8kfLqOE',
+        tags: ['Python', 'Raspberry Pi', 'LoRa HAT', 'LoRa Gateway', 'RSSI']
+      }
+    },
+    {
       title: 'Distributed Sensor Network',
       bg: 'assets/works/acd6.png',
       more: {
@@ -56,7 +67,7 @@ export class WorksComponent {
       bg: 'assets/works/prj4.png',
       more: {
         title: 'An app designed to control and communicate with IoT devices in a smart home through the use of an IoT gateway.',
-        content: 'The IoT gateways developed by our company offer services that facilitate the integration of various brands and types of devices into a unified network. Through the Smart Home App, users can effortlessly control and communicate with these devices using their smartphones.',
+        content: 'The IoT gateways developed by the company offer services that facilitate the integration of various brands and types of devices into a unified network. Through the Smart Home App, users can effortlessly control and communicate with these devices using their smartphones.',
         images: ['assets/works/prj4_1.png','assets/works/prj4_2.png'],
         tags: ['Angular', 'Python', 'MySQL', 'HTML', 'TypeScript', 'SCSS']
       }
@@ -119,7 +130,7 @@ export class WorksComponent {
         title: 'A system that manages the approval process of the official documents.',
         content: 'iFlow, a Document Management System, named as the pioneering project for office automation and intelligent transformation, features a responsive design (RWD). It enables employees to create official documents and manage the approval process. Managers and Executives can electronically sign these documents and download PDF copies directly from the system. This innovative system, iFlow, is currently in use by a financial conglomerate comprising nine companies and has been implemented using Angular, .NET Core, and MSSQL technologies.',
         images: ['assets/works/prj1.png','assets/works/prj1_more.png'],
-        tags: ['Angular', '.NET Core', 'MSSQL', 'HTML', 'TypeScript', 'SCSS']
+        tags: ['Angular', '.NET Core', 'MSSQL', 'HTML', 'TypeScript', 'SCSS', 'Redis']
       }
     },
     {
